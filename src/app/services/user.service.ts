@@ -16,7 +16,7 @@ export class UserService {
 
   login(login: any): Observable<Object> {
     return this.http.post(`${environment.serverUrl}login`, {
-      email: login.email,
+      email: login.Email,
       password: login.Password,
     });
   }

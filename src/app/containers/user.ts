@@ -4,7 +4,7 @@ export class User {
   City: string;
   Country: string;
   DateCreation: string;
-  Email: string;
+  email: string;
   FirstName: string;
   Id: string;
   IsActive: string;
