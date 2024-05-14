@@ -31,18 +31,18 @@ export class EditCommunityComponent implements OnInit, AfterViewInit {
 
   adminList: any;
 
+  // FirstName: new FormControl(''),
+  // LastName: new FormControl(''),
   userForm = new FormGroup({
-    FirstName: new FormControl(''),
-    LastName: new FormControl(''),
     Country: new FormControl('', Validators.required),
     Zip: new FormControl('', Validators.required),
     MobileNo: new FormControl(''),
     City: new FormControl(''),
     State: new FormControl(''),
     Email: new FormControl('', Validators.required),
-    Username: new FormControl('', Validators.required),
+    userName: new FormControl('', Validators.required),
     UserID: new FormControl('', Validators.required),
-    ProfilePicName: new FormControl('', Validators.required),
+    profilePicName: new FormControl('', Validators.required),
     CoverPicName: new FormControl('', Validators.required),
   });
   allCountryData: any;
@@ -87,18 +87,18 @@ export class EditCommunityComponent implements OnInit, AfterViewInit {
           this.memberDetails = res[0].memberList[0];
           this.memberIds = res[0].memberList.map((member) => member.profileId);
           this.adminList = res[0].memberList.map((member) => member);
+          // FirstName: this.memberDetails.FirstName,
+          // LastName: this.memberDetails.LastName,
           const data = {
-            FirstName: this.memberDetails.FirstName,
-            LastName: this.memberDetails.LastName,
             Country: this.memberDetails.Country,
             Zip: this.memberDetails.Zip,
             City: this.memberDetails.City,
             State: this.memberDetails.State,
-            Username: this.memberDetails.Username,
-            Email: this.memberDetails.Email,
+            userName: this.memberDetails.userName,
+            Email: this.memberDetails.email,
             MobileNo: this.memberDetails.MobileNo,
             UserID: this.memberDetails.UserID,
-            ProfilePicName: this.memberDetails.ProfilePicName,
+            profilePicName: this.memberDetails.profilePicName,
             CoverPicName: this.memberDetails?.CoverPicName,
           };
           this.userForm.setValue(data);
