@@ -40,9 +40,9 @@ export class EditCommunityComponent implements OnInit, AfterViewInit {
     City: new FormControl(''),
     State: new FormControl(''),
     Email: new FormControl('', Validators.required),
-    Username: new FormControl('', Validators.required),
+    userName: new FormControl('', Validators.required),
     UserID: new FormControl('', Validators.required),
-    ProfilePicName: new FormControl('', Validators.required),
+    profilePicName: new FormControl('', Validators.required),
     CoverPicName: new FormControl('', Validators.required),
   });
   allCountryData: any;
@@ -94,11 +94,11 @@ export class EditCommunityComponent implements OnInit, AfterViewInit {
             Zip: this.memberDetails.Zip,
             City: this.memberDetails.City,
             State: this.memberDetails.State,
-            Username: this.memberDetails.Username,
+            userName: this.memberDetails.userName,
             Email: this.memberDetails.email,
             MobileNo: this.memberDetails.MobileNo,
             UserID: this.memberDetails.UserID,
-            ProfilePicName: this.memberDetails.ProfilePicName,
+            profilePicName: this.memberDetails.profilePicName,
             CoverPicName: this.memberDetails?.CoverPicName,
           };
           this.userForm.setValue(data);
